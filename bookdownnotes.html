@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Bookdown Notes | ITPC 104 – Discrete Structures</title>
+  <meta name="description" content="Discrete Mathematics course modules" />
+  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Bookdown Notes | ITPC 104 – Discrete Structures" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Discrete Mathematics course modules" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Bookdown Notes | ITPC 104 – Discrete Structures" />
+  
+  <meta name="twitter:description" content="Discrete Mathematics course modules" />
+  
+
+<meta name="author" content="Robert Liwag" />
+
+
+<meta name="date" content="2020-06-09" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="logic.html"/>
+<link rel="next" href="pythonbasics.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a>Discrete Structures</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Course Syllabus</a></li>
+<li class="chapter" data-level="" data-path="course-guide.html"><a href="course-guide.html"><i class="fa fa-check"></i>Course Guide</a></li>
+<li class="chapter" data-level="1" data-path="logic.html"><a href="logic.html"><i class="fa fa-check"></i><b>1</b> Propositional Logic</a><ul>
+<li class="chapter" data-level="1.1" data-path="logic.html"><a href="logic.html#introduction"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
+<li class="chapter" data-level="1.2" data-path="logic.html"><a href="logic.html#objectives"><i class="fa fa-check"></i><b>1.2</b> Objectives</a></li>
+<li class="chapter" data-level="1.3" data-path="logic.html"><a href="logic.html#how-this-module-is-organized"><i class="fa fa-check"></i><b>1.3</b> How this module is organized</a></li>
+<li class="chapter" data-level="" data-path="logic.html"><a href="logic.html#lesson-1.-proposition"><i class="fa fa-check"></i>Lesson 1. Proposition</a><ul>
+<li class="chapter" data-level="" data-path="logic.html"><a href="logic.html#negation"><i class="fa fa-check"></i>Negation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="logic.html"><a href="logic.html#lesson-2.-logical-operators-connectives"><i class="fa fa-check"></i>Lesson 2. Logical Operators (Connectives)</a><ul>
+<li class="chapter" data-level="" data-path="logic.html"><a href="logic.html#conjunction-logical-and"><i class="fa fa-check"></i>Conjunction (Logical And)</a></li>
+<li class="chapter" data-level="" data-path="logic.html"><a href="logic.html#disjunction-logical-or"><i class="fa fa-check"></i>Disjunction (Logical Or)</a></li>
+<li class="chapter" data-level="" data-path="logic.html"><a href="logic.html#logical-exclusive-or"><i class="fa fa-check"></i>Logical Exclusive Or</a></li>
+<li class="chapter" data-level="" data-path="logic.html"><a href="logic.html#conditional-statement"><i class="fa fa-check"></i>Conditional Statement</a></li>
+<li class="chapter" data-level="" data-path="logic.html"><a href="logic.html#biconditional-statement"><i class="fa fa-check"></i>Biconditional Statement</a></li>
+<li class="chapter" data-level="" data-path="logic.html"><a href="logic.html#operator-precedence"><i class="fa fa-check"></i>Operator Precedence</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="logic.html"><a href="logic.html#lesson-3.-using-python"><i class="fa fa-check"></i>Lesson 3. Using Python</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="bookdownnotes.html"><a href="bookdownnotes.html"><i class="fa fa-check"></i><b>2</b> Bookdown Notes</a><ul>
+<li class="chapter" data-level="2.1" data-path="bookdownnotes.html"><a href="bookdownnotes.html#a-typical-bookdown-book"><i class="fa fa-check"></i><b>2.1</b> A typical bookdown book</a></li>
+<li class="chapter" data-level="2.2" data-path="bookdownnotes.html"><a href="bookdownnotes.html#compilation"><i class="fa fa-check"></i><b>2.2</b> Compilation</a></li>
+<li class="chapter" data-level="2.3" data-path="bookdownnotes.html"><a href="bookdownnotes.html#formatting"><i class="fa fa-check"></i><b>2.3</b> Formatting</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="bookdownnotes.html"><a href="bookdownnotes.html#inline"><i class="fa fa-check"></i><b>2.3.1</b> Inline</a></li>
+<li class="chapter" data-level="2.3.2" data-path="bookdownnotes.html"><a href="bookdownnotes.html#block-elements"><i class="fa fa-check"></i><b>2.3.2</b> Block elements</a></li>
+<li class="chapter" data-level="2.3.3" data-path="bookdownnotes.html"><a href="bookdownnotes.html#math-equation-environments-blocks-labels-and-referencing"><i class="fa fa-check"></i><b>2.3.3</b> Math equation environments (blocks), labels, and referencing</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="pythonbasics.html"><a href="pythonbasics.html"><i class="fa fa-check"></i><b>3</b> Python Basics</a><ul>
+<li class="chapter" data-level="3.1" data-path="pythonbasics.html"><a href="pythonbasics.html#a-normal-r-code-chunk"><i class="fa fa-check"></i><b>3.1</b> A normal R code chunk</a></li>
+<li class="chapter" data-level="3.2" data-path="pythonbasics.html"><a href="pythonbasics.html#modify-an-r-variable"><i class="fa fa-check"></i><b>3.2</b> Modify an R variable</a></li>
+<li class="chapter" data-level="3.3" data-path="pythonbasics.html"><a href="pythonbasics.html#a-python-chunk"><i class="fa fa-check"></i><b>3.3</b> A Python chunk</a></li>
+<li class="chapter" data-level="3.4" data-path="pythonbasics.html"><a href="pythonbasics.html#modify-a-python-variable"><i class="fa fa-check"></i><b>3.4</b> Modify a Python variable</a></li>
+<li class="chapter" data-level="3.5" data-path="pythonbasics.html"><a href="pythonbasics.html#python-graphics"><i class="fa fa-check"></i><b>3.5</b> Python graphics</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a>Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">ITPC 104 – Discrete Structures</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="bookdownnotes" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Bookdown Notes</h1>
+<p>The <strong>bookdown</strong> package can be installed from CRAN or Github:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="co"># or the development version</span></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></a></code></pre></div>
+<p>Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
+<div id="a-typical-bookdown-book" class="section level2">
+<h2><span class="header-section-number">2.1</span> A typical bookdown book</h2>
+<ul>
+<li>contains multiple chapters, and one chapter lives in one R Markdown file, with the filename extension <code>.Rmd</code> .</li>
+<li>Each R Markdown file must start immediately with the chapter title using the first-level heading, e.g., # Chapter Title.
+<ul>
+<li>Always label chapter and section titles using {#label} after them or automatic labels will be done anyway. Manual labeling prevents complications.</li>
+</ul></li>
+<li>All R Markdown files must be encoded in UTF-8, especially when they contain multi-byte characters such as Chinese, Japanese, and Korean.</li>
+</ul>
+</div>
+<div id="compilation" class="section level2">
+<h2><span class="header-section-number">2.2</span> Compilation</h2>
+<ul>
+<li>By default, bookdown merges all Rmd files by the order of filenames, e.g., <code>01-intro.Rmd</code> will appear before <code>02-literature.Rmd</code>.</li>
+<li>Filenames that start with an underscore _ are skipped. If there exists an Rmd file named <code>index.Rmd</code>, it will always be treated as the first file when merging all Rmd files. The reason for this special treatment is that the HTML file index.html to be generated from index.Rmd is usually the default index file when you view a website.</li>
+<li>override the above behavior by including a configuration file named <code>_bookdown.yml</code> in the book directory. You can use a field named rmd_files to define your own list and order of Rmd files for the book. For example: <code>rmd_files: [&quot;index.Rmd&quot;, &quot;abstract.Rmd&quot;, &quot;intro.Rmd&quot;]</code></li>
+<li>set <code>new_session: yes</code> in the configuration file <code>_bookdown.yml</code> in order that other chapters will compile from clean slate when using <code>knitr</code> on <code>index.Rmd</code>.</li>
+</ul>
+</div>
+<div id="formatting" class="section level2">
+<h2><span class="header-section-number">2.3</span> Formatting</h2>
+<div id="inline" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> Inline</h3>
+<ul>
+<li><em>italic</em> formatting: use <code>*italic*</code> or <code>_italic_</code></li>
+<li><strong>bold</strong> formatting: use <code>**bold**</code> or <code>__bold__</code></li>
+<li>for subscripts as in H<sub>2</sub>O: surround the subscript with <code>~</code> like <code>H~2~O</code></li>
+<li>superscripts such as x<sup>2</sup> + y<sup>2</sup>: surround by <code>^</code> symbol like <code>x^2^ + y^2^</code></li>
+<li>for <code>inline code</code> like this: surround text by backticks <code>`inline code`</code></li>
+<li>for <span class="smallcaps">Small Caps</span>: use <code>&lt;span style=&quot;font-variant:small-caps;&quot;&gt;Small Caps&lt;/span&gt;</code></li>
+<li>link such as <a href="https://www.rstudio.com">RStudio</a>: use <code>[text](link)</code>, e.g. <code>[RStudio](https://www.rstudio.com)</code></li>
+<li>use similar syntax when inserting an image; just add bang symbol <code>!</code>: <code>![alt text or image title](path/to/image)</code></li>
+<li>For inline LaTex <strong>math expressions</strong> such as <span class="math inline">\(x^2+y^2\)</span>: surround expression by <code>$</code> sign as in <code>$x^2 + y^2$</code></li>
+</ul>
+</div>
+<div id="block-elements" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> Block elements</h3>
+<ul>
+<li>Section headers: use a number of <code>#</code> signs
+<ul>
+<li><code># Chapter</code></li>
+<li><code>## Section</code></li>
+<li><code>### Subsection</code></li>
+<li><code>#### Subsubsection</code></li>
+</ul></li>
+<li>To remove heading number, use <code>{-}</code>
+<ul>
+<li>example: <code># Preface {-}</code></li>
+</ul></li>
+<li>For unordered lists, start the item with <code>*</code>, <code>-</code>, or <code>+</code>
+<ul>
+<li>nest using the same prefixed with two spaces for each inner list</li>
+</ul></li>
+<li>For ordered list, use numbers. the same principle follows for nested lists.</li>
+<li>For block or display style LaTex <strong>math expressions</strong>, enclose the expression with <code>$$</code>. This expression <code>$$f(k) = {n \choose k} p^{k} (1-p)^{n-k}$$</code> has this output:
+<span class="math display">\[f(k) = {n \choose k} p^{k} (1-p)^{n-k}\]</span></li>
+</ul>
+</div>
+<div id="math-equation-environments-blocks-labels-and-referencing" class="section level3">
+<h3><span class="header-section-number">2.3.3</span> Math equation environments (blocks), labels, and referencing</h3>
+<ul>
+<li>To number equations and refer to them, place them in the equation environment and assign to them labels using the syntax <code>(\#eq:label)</code>. For instance,</li>
+</ul>
+<pre><code>\begin{equation}
+   f(k) = {n \choose k} p^{k} (1-p)^{n-k}
+   (\#eq:binom)
+\end{equation}</code></pre>
+<p>renders
+<span class="math display" id="eq:binom">\[\begin{equation}
+   f(k) = {n \choose k} p^{k} (1-p)^{n-k}
+   \tag{2.1}
+\end{equation}\]</span>
+and refer using <code>\@ref(eq:binom)</code>, e.g., see <a href="bookdownnotes.html#eq:binom">(2.1)</a></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="logic.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="pythonbasics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["DiscreteMathModule.pdf", "DiscreteMathModule.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
